@@ -1,6 +1,6 @@
 from show_list import show_contacts
 from config import fields
-from funcs import max_limit_input
+from user_interface import max_limit_input
 
 
 def edit_contact(contacts_list):

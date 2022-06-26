@@ -1,7 +1,7 @@
 from config import import_export_formats
 import csv_io
 import json_io
-from funcs import select_file_format
+from user_interface import select_file_format
 
 
 def export_format(contacts_list):

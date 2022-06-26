@@ -1,5 +1,5 @@
 from config import fields
-from funcs import max_limit_input
+from user_interface import max_limit_input
 
 
 def add_contact(contacts_list):

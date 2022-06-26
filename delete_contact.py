@@ -1,5 +1,5 @@
 from show_list import show_contacts
-from funcs import confirm_input
+from user_interface import confirm_input
 
 
 def delete(contacts_list):
