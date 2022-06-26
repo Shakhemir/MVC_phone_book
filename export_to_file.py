@@ -1,11 +1,11 @@
 from config import import_export_formats
 import csv_io
 import json_io
-from user_interface import select_file_format
+import user_interface as ui
 
 
 def export_format(contacts_list):
-    file_format = select_file_format()
+    file_format = ui.select_file_format()
     file_name = input('Введите имя файла для экспорта: ')
     if '.' not in file_name:
         file_name += '.' + import_export_formats[file_format].lower()

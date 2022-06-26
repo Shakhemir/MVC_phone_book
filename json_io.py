@@ -1,6 +1,7 @@
 import json
 from config import json_field_names
 
+
 def import_from(file_name: str):
     with open(file_name, 'r') as file:
         jdata = file.read().strip()
@@ -23,4 +24,3 @@ def export_to(file_name: str, contacts_list: list):
         contacts_dict_list.append(contact_dict)
     with open(file_name, 'w') as file:
         json.dump(contacts_dict_list, file, indent=4, ensure_ascii=False)
-

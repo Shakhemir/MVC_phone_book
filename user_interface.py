@@ -14,9 +14,9 @@ def select_command():
     return input('Выберите номер команды (для выхода пустая строка): ')
 
 
-def confirm_input(text: str):
+def confirm_input(text=''):
     answer = input(f'{text} (для подтверждения введите "да"/"yes"/"y")?')
-    return answer.lower() in 'да', 'yes', 'y'
+    return answer.lower() in ('да', 'yes', 'y')
 
 
 def max_limit_input(max_limit: int, text=''):
@@ -39,3 +39,15 @@ def select_file_format():
     while not selected_format.isdigit() or selected_format in range(1, max_count + 1):
         selected_format = input()
     return int(selected_format) - 1
+
+
+def select_contact(contacts_list, for_what=''):
+    from show_list import show_contacts
+    show_contacts(contacts_list)
+    max_id = len(contacts_list)
+    select_contact_id = '?'
+    while not select_contact_id.isdigit() or int(select_contact_id) not in range(max_id):
+        select_contact_id = input(f'Выберите N контакта {for_what} (пустая строка - отмена): ')
+        if select_contact_id == '':
+            return False
+    return int(select_contact_id)
